@@ -40,32 +40,34 @@ loadingFrame.BackgroundTransparency = 1 -- FULLY TRANSPARENT
 loadingFrame.BorderSizePixel = 0
 loadingFrame.Parent = screenGui
 
+-- New Update Text (above loading timer), moved up a bit
+local newUpdateText = Instance.new("TextLabel")
+newUpdateText.Size = UDim2.new(0.7, 0, 0, 30)
+newUpdateText.Position = UDim2.new(0.15, 0, 0.40, 0) -- moved from 0.45 to 0.40 for vertical shift up
+newUpdateText.BackgroundTransparency = 1
+newUpdateText.Font = Enum.Font.Gotham
+newUpdateText.TextSize = 30
+newUpdateText.TextColor3 = Color3.fromRGB(210, 210, 210)
+newUpdateText.TextXAlignment = Enum.TextXAlignment.Center
+newUpdateText.TextYAlignment = Enum.TextYAlignment.Center
+newUpdateText.Text = "New Update Script DarkSpawner"
+newUpdateText.Parent = loadingFrame
+
+-- Loading Timer Text (below new update text), also moved up a bit
 local loadingText = Instance.new("TextLabel")
-loadingText.Size = UDim2.new(0.6, 0, 0, 40) -- narrower width and smaller height
-loadingText.Position = UDim2.new(0.2, 0, 0.45, 0) -- horizontally centered (0.2 offset + 0.6 size)
+loadingText.Size = UDim2.new(0.7, 0, 0, 60) -- bigger height for visibility
+loadingText.Position = UDim2.new(0.15, 0, 0.45, 0) -- moved from 0.50 to 0.45
 loadingText.BackgroundTransparency = 1
 loadingText.Font = Enum.Font.GothamBold
-loadingText.TextSize = 24 -- smaller font size
-loadingText.TextColor3 = Color3.fromRGB(200, 200, 200)
+loadingText.TextSize = 34
+loadingText.TextColor3 = Color3.fromRGB(230, 230, 230)
 loadingText.TextXAlignment = Enum.TextXAlignment.Center
 loadingText.TextYAlignment = Enum.TextYAlignment.Center
-loadingText.Text = "Please wait 25 seconds"
+loadingText.Text = "Please wait 50 seconds"
 loadingText.Parent = loadingFrame
 
-local appealText = Instance.new("TextLabel")
-appealText.Size = UDim2.new(0.6, 0, 0, 30)
-appealText.Position = UDim2.new(0.2, 0, 0.52, 0) -- just below loadingText
-appealText.BackgroundTransparency = 1
-appealText.Font = Enum.Font.Gotham
-appealText.TextSize = 18
-appealText.TextColor3 = Color3.fromRGB(150, 150, 150)
-appealText.Text = "Appeal: Please be patient while loading."
-appealText.TextXAlignment = Enum.TextXAlignment.Center
-appealText.TextYAlignment = Enum.TextYAlignment.Center
-appealText.Parent = loadingFrame
-
 -- Countdown for loading
-local countdown = 25
+local countdown = 50
 
 local function updateLoadingText()
     loadingText.Text = "Please wait "..countdown.." seconds"
